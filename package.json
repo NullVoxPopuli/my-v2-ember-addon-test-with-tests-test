@@ -1,6 +1,7 @@
 {
   "name": "my-v2-ember-addon-test-with-tests-test",
   "version": "0.0.0",
+  "type": "module",
   "description": "The default blueprint for Embroider v2 addons.",
   "keywords": [
     "ember-addon"
@@ -29,8 +30,7 @@
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "prepack": "rollup --config",
-    "start": "rollup --config --watch",
-    "test": "echo 'A v2 addon does not have tests, run tests in test-app'"
+    "start": "vite --mode test"
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.8.9",
@@ -39,12 +39,19 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/eslint-parser": "^7.25.1",
-    "@babel/runtime": "^7.25.6",
+    "@babel/plugin-transform-runtime": "^7.26.9",
+    "@babel/runtime": "^7.26.9",
+    "@ember/test-helpers": "^5.1.0",
+    "@ember/test-waiters": "^4.0.0",
     "@embroider/addon-dev": "^7.1.0",
+    "@embroider/core": "4.0.0-alpha.6",
+    "@embroider/macros": "1.17.0-alpha.5",
+    "@embroider/vite": "1.0.0-alpha.7",
     "@eslint/js": "^9.17.0",
     "@rollup/plugin-babel": "^6.0.4",
     "babel-plugin-ember-template-compilation": "^2.2.5",
     "concurrently": "^9.0.1",
+    "ember-qunit": "^9.0.1",
     "ember-source": "^5.4.0",
     "ember-template-lint": "^6.0.0",
     "eslint": "^9.17.0",
@@ -55,8 +62,12 @@
     "globals": "^15.14.0",
     "prettier": "^3.4.2",
     "prettier-plugin-ember-template-tag": "^2.0.4",
+    "qunit": "^2.24.1",
+    "qunit-dom": "^3.4.0",
     "rollup": "^4.22.5",
-    "rollup-plugin-copy": "^3.5.0"
+    "rollup-plugin-copy": "^3.5.0",
+    "testem": "^3.15.2",
+    "vite": "^6.2.1"
   },
   "peerDependencies": {
     "ember-source": ">= 4.12.0"
