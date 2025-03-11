@@ -6,9 +6,14 @@ export default defineConfig(({ mode }) => {
   if (mode === 'test') {
     return {
       build: { rollupOptions: { input: { main: 'index.html' } } },
+      optimizeDeps: {
+        exclude: ['test-container-styles.css', 'ember-qunit'],
+      },
       plugins: [
         ember(),
         babel({
+          configFile: './tests/babel.config.cjs',
+          babelHelpers: 'runtime',
           extensions,
         }),
       ],
