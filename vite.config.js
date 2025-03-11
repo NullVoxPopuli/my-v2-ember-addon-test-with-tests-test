@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
     return {
       build: { rollupOptions: { input: { main: 'index.html' } } },
       optimizeDeps: {
-        exclude: ['test-container-styles.css', 'ember-qunit'],
+        exclude: ['ember-qunit'],
       },
       plugins: [
         ember(),

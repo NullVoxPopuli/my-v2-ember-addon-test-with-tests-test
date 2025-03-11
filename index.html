@@ -5,7 +5,6 @@
     <title>AppTemplate Tests</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../src/styles/app.css" />
   </head>
   <body>
     <div id="qunit"></div>
@@ -25,7 +24,7 @@
 
     <script type="module">
       import { start } from "./tests/test-helper";
-      import.meta.glob("./tests/**/*.{js,gjs,gts}", { eager: true });
+      import.meta.glob("./tests/**/*.{js,ts,gjs,gts}", { eager: true });
       start();
     </script>
   </body>
